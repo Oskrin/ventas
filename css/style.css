@@ -86,7 +86,7 @@ textarea {
   font-style: normal;
   font-weight: 400;
   src: local('Geostar Fill'), local('GeostarFill-Regular');
-  color: #8C2200!important;
+  color: #FFFFFF!important;
 }
 
 .navbar-fixed-top {
@@ -306,7 +306,7 @@ textarea {
     padding: 15px 0;
 
     font-size: 12px;
-    background: #512500;
+    background: #129ED9;
     color: #999;
 }
 
