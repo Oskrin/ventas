@@ -2114,16 +2114,16 @@ function inicio() {
     ///////////calendarios////////////
     $("#fecha_actual").datepicker({
         dateFormat: 'yy-mm-dd'  
-    });
+    }).datepicker('setDate', 'today');
     $("#cancelacion").datepicker({
         dateFormat: 'yy-mm-dd'
-    });
+    }).datepicker('setDate', 'today');
     $("#fecha_auto").datepicker({
         dateFormat: 'yy-mm-dd'
-    });
+    }).datepicker('setDate', 'today');
     $("#fecha_caducidad").datepicker({
         dateFormat: 'yy-mm-dd'
-    });
+    }).datepicker('setDate', 'today');
   
 //////////////////////////////////
 
