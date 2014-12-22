@@ -252,6 +252,7 @@ function entrar3() {
                                 su = jQuery("#list").jqGrid('addRowData', $("#cod_producto").val(), datarow);
                                 $("#cod_producto").val("");
                                 $("#codigo").val("");
+                                $("#codigo_barras").val("");
                                 $("#producto").val("");
                                 $("#cantidad").val("");
                                 $("#p_venta").val("");
@@ -296,6 +297,7 @@ function entrar3() {
                                     su = jQuery("#list").jqGrid('setRowData', $("#cod_producto").val(), datarow);
                                     $("#cod_producto").val("");
                                     $("#codigo").val("");
+                                    $("#codigo_barras").val("");
                                     $("#producto").val("");
                                     $("#cantidad").val("");
                                     $("#p_venta").val("");
@@ -331,6 +333,7 @@ function entrar3() {
                                         su = jQuery("#list").jqGrid('addRowData', $("#cod_producto").val(), datarow);
                                         $("#cod_producto").val("");
                                         $("#codigo").val("");
+                                        $("#codigo_barras").val("");
                                         $("#producto").val("");
                                         $("#cantidad").val("");
                                         $("#p_venta").val("");
@@ -1440,6 +1443,7 @@ function limpiar_campo(){
 function limpiar_campo3(){
     if($("#codigo").val() === ""){
         $("#cod_producto").val("");
+        $("#codigo_barras").val("");
         $("#producto").val("");
         $("#cantidad").val("");
         $("#p_venta").val("");
@@ -1452,6 +1456,7 @@ function limpiar_campo4(){
     if($("#producto").val() === ""){
         $("#cod_producto").val("");
         $("#codigo").val("");
+        $("#codigo_barras").val("");
         $("#cantidad").val("");
         $("#p_venta").val("");
         $("#descuento").val("");
@@ -1706,8 +1711,74 @@ function inicio() {
     $("#adelanto").on("keypress",punto);
     ////////////////////////////////
       
-    //////////////////buscar productos codigo////////////////
-    $("#codigo").keyup(function(e) {
+    //////////////////buscar productos codigo//////////////// 
+    
+    $("#codigo_barras").keyup(function(e) {
+        var precio = $("#tipo_precio").val(); 
+        var codigo = $("#codigo_barras").val();
+        if (precio === "MINORISTA") {
+            $.getJSON('../procesos/search.php?codigo_barras=' + codigo + '&precio=' + precio, function(data) {
+                var tama = data.length;
+                if (tama !== 0) {
+                   for (var i = 0; i < tama; i = i + 9) {
+                        $("#codigo").val(data[i]);
+                        $("#producto").val(data[i + 1]);
+                        $("#p_venta").val(data[i + 2]);
+                        $("#disponibles").val(data[i + 3]);
+                        $("#iva_producto").val(data[i + 4]);
+                        $("#carga_series").val(data[i + 5]);
+                        $("#cod_producto").val(data[i + 6]);
+                        $("#des").val(data[i + 7]);
+                        $("#inventar").val(data[i + 8]);
+                        $("#cantidad").focus();
+                  }
+                }else{
+                    $("#codigo").val("");
+                    $("#producto").val("");
+                    $("#p_venta").val("");
+                    $("#disponibles").val("");
+                    $("#iva_producto").val("");
+                    $("#carga_series").val("");
+                    $("#cod_producto").val("");
+                    $("#des").val("");
+                    $("#inventar").val("");
+                }
+            });
+        }else{
+             if (precio === "MAYORISTA") {
+            $.getJSON('../procesos/search.php?codigo_barras=' + codigo + '&precio=' + precio, function(data) {
+                var tama = data.length;
+                if (tama !== 0) {
+                   for (var i = 0; i < tama; i = i + 9) {
+                        $("#codigo").val(data[i]);
+                        $("#producto").val(data[i + 1]);
+                        $("#p_venta").val(data[i + 2]);
+                        $("#disponibles").val(data[i + 3]);
+                        $("#iva_producto").val(data[i + 4]);
+                        $("#carga_series").val(data[i + 5]);
+                        $("#cod_producto").val(data[i + 6]);
+                        $("#des").val(data[i + 7]);
+                        $("#inventar").val(data[i + 8]);
+                        $("#cantidad").focus();
+                  }
+                }else{
+                    $("#codigo").val("");
+                    $("#producto").val("");
+                    $("#p_venta").val("");
+                    $("#disponibles").val("");
+                    $("#iva_producto").val("");
+                    $("#carga_series").val("");
+                    $("#cod_producto").val("");
+                    $("#des").val("");
+                    $("#inventar").val("");
+                }
+            });
+        }
+        }
+    });
+    ///////////////////////////////////////////////////////
+    
+        $("#codigo").keypress(function(e) {
         var precio = $("#tipo_precio").val(); 
         if (precio === "MINORISTA") {
             $("#codigo").autocomplete({
@@ -1780,7 +1851,7 @@ function inicio() {
             }
         }
     });
-    /////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////
     
     //////////////////buscar productos articulo////////////////
     $("#producto").keyup(function(e) {
@@ -2042,9 +2113,7 @@ function inicio() {
 
     ///////////calendarios////////////
     $("#fecha_actual").datepicker({
-
-        dateFormat: 'yy-mm-dd',
-        
+        dateFormat: 'yy-mm-dd'  
     });
     $("#cancelacion").datepicker({
         dateFormat: 'yy-mm-dd'

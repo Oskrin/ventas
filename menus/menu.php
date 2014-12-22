@@ -10,15 +10,17 @@ function menu_1() {
             <li><a href="" target="_parent"> <i class="icon-th-large"></i> Ingresos</a>
                 <ul>
                     <li><a href="../html/usuarios.php" target="_blank">Usuarios</a></li>
-                    <li><a href="../html/clientes.php" target="_blank">Clientes</a></li>
                     <li><a href="../html/proveedores.php"target="_blank">Proveedores</a></li>
-                    <li><a href="../html/productos.php" target="_blank">Productos</a></li>
-                    <li><a href="" target="_parent">Clasificacion</a>
+                    <li><a href="../html/clientes.php" target="_blank">Clientes</a></li>
+                    <li><a href="" target="_parent">Generales</a>
                     <ul>
                           <li><a href="../html/categorias.php" target="_blank">Categorias</a></li>
                           <li><a href="../html/marcas.php" target="_blank">Marcas</a></li>
+                          <li><a href="../html/medida.php" target="_blank">Unidades de Medida</a></li>
                     </ul>
                     </li>
+                    <li><a href="../html/productos.php" target="_blank">Productos</a></li>
+                    
                 </ul>
             </li>
             

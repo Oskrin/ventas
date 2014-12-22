@@ -125,7 +125,9 @@ $cont1++;
                                                             <div class="control-group">											
                                                                 <label class="control-label" for="fecha_actual">Fecha Actual:</label>
                                                                 <div class="controls">
-                                                                    <input type="text" name="fecha_actual" id="fecha_actual" readonly value="<?php date_default_timezone_set('America/Guayaquil'); echo date("Y-m-d"); ?>" class="campo" style="width: 100px" />
+                                                                    <input type="text" name="fecha_actual" id="fecha_actual" readonly value="<?php date_default_timezone_set('America/Guayaquil');
+                echo date("Y-m-d");
+                ?>" class="campo" style="width: 100px" />
                                                                 </div>
                                                             </div>
                                                         </section>
@@ -232,7 +234,7 @@ $cont1++;
                                                                         <option value="Cheque">Cheque</option>
                                                                         <option value="Targeta">Tarjeta</option>
                                                                     </select> </td>
-                                                               
+
                                                             </tr>
                                                         </table>
                                                     </fieldset>  
@@ -241,29 +243,28 @@ $cont1++;
                                                         <legend>Detalle Factura</legend>
                                                         <table cellpadding="2" border="0" style="margin-left: 10px">
                                                             <tr>
-                                                                <td><label>Código:</label></td>   
+                                                                <td><label>Código Barras:</label></td>
+                                                                <td><label>Código:</label></td>  
                                                                 <td><label>Producto:</label></td>   
                                                                 <td><label>Cantidad:</label></td>   
                                                                 <td><label style="width: 100%">P. Venta:</label></td>
                                                                 <!--<td><label>Descuento:</label></td>-->
                                                                 <!--<td><label>Stock:</label></td>-->
-                                                                <!--<td><label>Items:</label></td>-->
                                                             </tr>
 
                                                             <tr>
+                                                                <td><input type="text" name="codigo_barras" id="codigo_barras" class="campo" style="width: 170px"  placeholder="Buscar..."/></td>
                                                                 <td><input type="text" name="codigo" id="codigo" class="campo" style="width: 180px"  placeholder="Buscar..."/></td>
-                                                                <td><input type="text" name="producto" id="producto" class="campo" style="width: 300px"  placeholder="Buscar..."/></td>
+                                                                <td><input type="text" name="producto" id="producto" class="campo" style="width: 250px"  placeholder="Buscar..."/></td>
                                                                 <td><input type="text" name="cantidad" id="cantidad" class="campo" style="width: 60px" maxlength="10"/></td>
                                                                 <td><input type="text" name="p_venta" id="p_venta" style="width: 60px" class="campo" maxlength="10"/></td>
                                                                 <td><input type="hidden" name="descuento" id="descuento" class="campo" readonly style="width: 60px" maxlength="10" placeholder="%" min="0" max="0" /></td>
-                                                                <!--<td><input type="text" name="disponibles" id="disponibles" class="campo" readonly style="width: 60px" maxlength="10" value=""/></td>-->
-                                                                <!--<td><input type="number" name="items" id="items" class="campo" style="width: 60px" maxlength="10" value="25" min="25"/></td>-->
-                                                                <!--<td><input type="button" class="btn btn-primary" id='btncargar' style="margin-top: -10px" value="Cargar"></td>-->
-                                                                <td><input type="hidden" name="iva_producto" id="iva_producto" class="campo" /></td>
-                                                                <td><input type="hidden" name="carga_series" id="carga_series" class="campo" /></td>
-                                                                <td><input type="hidden" name="cod_producto" id="cod_producto" class="campo" /></td>
-                                                                <td><input type="hidden" name="des" id="des" class="campo"/></td>
-                                                                <td><input type="hidden" name="inventar" id="inventar" class="campo" /></td>
+                                                                <td><input type="hidden" name="disponibles" id="disponibles" class="campo" readonly style="width: 60px" maxlength="10" value=""/></td>
+                                                                <td><input type="hidden" name="iva_producto" id="iva_producto" class="campo" style="width: 60px" /></td>
+                                                                <td><input type="hidden" name="carga_series" id="carga_series" class="campo" style="width: 60px" /></td>
+                                                                <td><input type="hidden" name="cod_producto" id="cod_producto" class="campo" style="width: 60px" /></td>
+                                                                <td><input type="hidden" name="des" id="des" class="campo" style="width: 60px"/></td>
+                                                                <td><input type="hidden" name="inventar" id="inventar" class="campo" style="width: 60px" /></td>
                                                             </tr>
                                                         </table>
 
