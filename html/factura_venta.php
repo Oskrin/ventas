@@ -232,7 +232,6 @@ $cont1++;
                                                                         <option value="Cheque">Cheque</option>
                                                                         <option value="Targeta">Tarjeta</option>
                                                                     </select> </td>
-
                                                             </tr>
                                                         </table>
                                                     </fieldset>  
@@ -270,7 +269,7 @@ $cont1++;
                                                             <table id="list"></table>
                                                         </div>
 
-                                                        <table border="0" cellspacing="2" style="margin-left: 625px">
+                                                        <table border="0" cellspacing="2" style="margin-left: 635px">
                                                             <tr>
                                                                 <td><label for="total_p" style="width: 100%">Tarifa 0:</label></td>
                                                                 <td><input type="text" style="width:80px" name="total_p" id="total_p" readonly value="0.00" class="campo"/></td>
