@@ -27,7 +27,7 @@ function menu_1() {
             <li><a href="" target="_parent"><i class="icon-book"></i> Procesos</a>
                 <ul>
                     <li><a href="../html/inventario.php" target="_blank">Inventario</a></li>
-                    <li><a href="../html/proformas.php" target="_blank">Proformas</a></li>
+                    <!--<li><a href="../html/proformas.php" target="_blank">Proformas</a></li>-->
                     <li><a href="" target="_parent">Compras</a>
                         <ul>
                             <li><a href="../html/factura_compra.php" target="_blank">Productos Bodega</a></li>
@@ -37,7 +37,7 @@ function menu_1() {
                     <li><a href="" target="_parent">Ventas</a>
                         <ul>
                             <li><a href="../html/factura_venta.php" target="_blank">Ventas facturación</a></li>
-                            <li><a href="../html/notasCredito.php" target="_blank">Notas de crédito</a></li>
+                            <!--<li><a href="../html/notasCredito.php" target="_blank">Notas de crédito</a></li>-->
                         </ul>
                     </li>
 
@@ -182,7 +182,7 @@ function menu_2() {
                     <li><a href="" target="_parent">Ventas</a>
                         <ul>
                             <li><a href="../html/factura_venta.php" target="_blank">Ventas facturación</a></li>
-                            <li><a href="../html/notasCredito.php" target="_blank">Notas de crédito</a></li>
+                            <!--<li><a href="../html/notasCredito.php" target="_blank">Notas de crédito</a></li>-->
                         </ul>
                     </li>
                      <li><a href="" target="_parent">Cartera</a>

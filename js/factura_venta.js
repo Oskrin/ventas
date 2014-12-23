@@ -1448,6 +1448,7 @@ function limpiar_campo3(){
 
 function limpiar_campo4(){
     if($("#producto").val() === ""){
+        $("#codigo_barras").val("");
         $("#cod_producto").val("");
         $("#codigo").val("");
         $("#codigo_barras").val("");
@@ -1772,6 +1773,7 @@ function inicio() {
     });
     ///////////////////////////////////////////////////////
     
+    //////////////////buscar productos codigo barras//////////////// 
         $("#codigo").keypress(function(e) {
         var precio = $("#tipo_precio").val(); 
         if (precio === "MINORISTA") {
