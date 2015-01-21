@@ -7,10 +7,10 @@ $cont = 0;
 $repe = 0;
 
 //////////////////validar repetidos//////////////////
-$consulta = pg_query("select * from unidades_medida where descripcion='" . strtoupper($_POST[descripcion]) . "'");
-while ($row = pg_fetch_row($consulta)) {
-    $repe++;
-}
+//$consulta = pg_query("select * from unidades_medida where descripcion='" . strtoupper($_POST[descripcion]) . "'");
+//while ($row = pg_fetch_row($consulta)) {
+//    $repe++;
+//}
 //////////////////////////////////////////////////    
 
 if ($_POST['oper'] == "add") {
@@ -21,13 +21,12 @@ if ($_POST['oper'] == "add") {
     $cont++;
 
     if ($repe == 0) {
-        pg_query("insert into unidades_medida values('$cont','" . strtoupper($_POST[descripcion]) . "','" . strtoupper($_POST[abreviatura]) . "','Activo')");
+        pg_query("insert into unidades_medida values('$cont','" . strtoupper($_POST[descripcion]) . "','" . strtoupper($_POST[abreviatura]) . "','$_POST[cantidad]','Activo')");
     }
 } else {
     if ($_POST['oper'] == "edit") {
-        if ($repe == 0) {
-            pg_query("update unidades_medida set id_unidades = '$_POST[id_unidades]', descripcion='" . strtoupper($_POST[descripcion]) . "', abreviatura='" . strtoupper($_POST[abreviatura]) . "' where id_unidades='$_POST[id_unidades]'");
-        }
+        pg_query("update unidades_medida set id_unidades = '$_POST[id_unidades]', descripcion='" . strtoupper($_POST[descripcion]) . "', abreviatura='" . strtoupper($_POST[abreviatura]) . "', cantidad = '$_POST[cantidad]', Estado = 'Activo' where id_unidades='$_POST[id_unidades]'");
+        
     }
 }
 ?>

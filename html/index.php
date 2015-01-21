@@ -31,11 +31,11 @@ session_destroy();
         <script type="text/javascript" src="../js/alertify.min.js"></script>
     </head>
 
-    <body style="background: url(../images/fondo.jpg)no-repeat fixed center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;">
+    <body style="background: url(../images/fondo.fw.png)no-repeat fixed center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;">
         <div class="account-container">
             <div class="content clearfix">
                 <form action="" method="post" name="form_admin">

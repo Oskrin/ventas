@@ -53,8 +53,8 @@ var dialogos_unidad =
 {
     autoOpen: false,
     resizable: false,
-    width: 250,
-    height: 250,
+    width: 300,
+    height: 350,
     modal: true
 };
 
@@ -413,10 +413,14 @@ function agregar_unidades() {
         $("#abreviatura").focus();
         alertify.error("Ingrese Abreviatura");
     }else{
+        if ($("#cantidad").val() === "") {
+        $("#cantidad").focus();
+        alertify.error("Ingrese Cantidad");
+    }else{
         $.ajax({
             type: "POST",
             url: "../procesos/guardar_medidas.php",
-            data: "descripcion=" + $("#descripcion").val()+ "&abreviatura=" + $("#abreviatura").val() ,
+            data: "descripcion=" + $("#descripcion").val()+ "&abreviatura=" + $("#abreviatura").val()+ "&cantidad=" + $("#cantidad").val() ,
             success: function(data) {
                 var val = data;
                 if (val == 1) {
@@ -429,7 +433,8 @@ function agregar_unidades() {
                 }
             }
         });
-    }
+      }
+     }
    }
 }
 
@@ -494,6 +499,9 @@ function porcenta2(){
 }
 
 function inicio() {
+    
+    $("#cod_prod").focus();
+       alertify.set({ delay: 1000 });
     
     jQuery().UItoTop({
         easingType: 'easeOutQuart'

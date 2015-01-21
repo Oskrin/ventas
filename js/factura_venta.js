@@ -306,7 +306,7 @@ function entrar3() {
                                     $('#combobox').children().remove().end();
                                 }
                                 else {
-                                    if(filas.length < 15){
+                                    if(filas.length < 17){
                                         if ($("#descuento").val() !== "") {
                                             desc = $("#descuento").val();
                                             precio = (parseFloat($("#p_venta").val())).toFixed(2);
@@ -1561,6 +1561,8 @@ function punto(e){
 }
 
 function inicio() {
+    
+    $("#ruc_ci").focus();
     jQuery().UItoTop({
         easingType: 'easeOutQuart'
     });

@@ -23,7 +23,7 @@ if ($repe == 0) {
     $cont++;
 ////////////////////////////////////////
 
-    pg_query("insert into unidades_medida values('$cont','" . strtoupper($_POST[descripcion]) . "','" . strtoupper($_POST[abreviatura]) . "','Activo')");
+    pg_query("insert into unidades_medida values('$cont','" . strtoupper($_POST[descripcion]) . "','" . strtoupper($_POST[abreviatura]) . "','$_POST[cantidad]','Activo')");
     $data = 1;
 } else {
     $data = 0;

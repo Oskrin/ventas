@@ -14,11 +14,12 @@ function inicio() {
     jQuery("#list").jqGrid({
         url: '../xml/xmlMedidas.php',
         datatype: 'xml',
-        colNames: ['Cod', 'Descripción', 'Abreviatura'],
+        colNames: ['Cod', 'Descripción', 'Abreviatura','Cantidad'],
         colModel: [
             {name: 'id_unidades', index: 'id_unidades', editable: true, align: 'center', width: '120', search: false, frozen: true, editoptions: {readonly: 'readonly'}, formoptions: {elmprefix: ""}},
             {name: 'descripcion', index: 'descripcion', editable: true, align: 'center', width: '350', search: true, frozen: true, formoptions: {elmsuffix: " (*)"}, editrules: {required: true}},
-            {name: 'abreviatura', index: 'abreviatura', editable: true, align: 'center', width: '350', search: true, frozen: true, formoptions: {elmsuffix: " (*)"}, editrules: {required: true}}
+            {name: 'abreviatura', index: 'abreviatura', editable: true, align: 'center', width: '350', search: true, frozen: true, formoptions: {elmsuffix: " (*)"}, editrules: {required: true}},
+            {name: 'cantidad', index: 'cantidad', editable: true, align: 'center', width: '350', search: true, frozen: true, formoptions: {elmsuffix: " (*)"}, editrules: {required: true}}
         ],
         rowNum: 10,
         rowList: [10, 20, 30],
