@@ -1,4 +1,4 @@
-$(document).on("ready", inicio);
+﻿$(document).on("ready", inicio);
 
 function evento(e) {
     e.preventDefault();
@@ -1060,14 +1060,14 @@ function guardar_factura() {
                                 $("#nombre_cliente").focus();
                                 alertify.error("Nombres del cliente");
                             }else{
-                                if ($("#direccion_cliente").val() === "") {
-                                    $("#direccion_cliente").focus();
-                                    alertify.error("Dirección del cliente");
-                                }else{
-                                    if ($("#tipo_precio").val() === "") {
-                                        $("#tipo_precio").focus();
-                                        alertify.error("Seleccione un tipo de precio");
-                                    } else {
+                               // if ($("#direccion_cliente").val() === "") {
+                               //     $("#direccion_cliente").focus();
+                               //     alertify.error("Dirección del cliente");
+                               // }else{
+                                 //   if ($("#tipo_precio").val() === "") {
+                                 //       $("#tipo_precio").focus();
+                                  //      alertify.error("Seleccione un tipo de precio");
+                                 //   } else {
                                         if (tam.length === 0) {
                                             $("#codigo_barras").focus();
                                             alertify.error("Error... Llene productos a la factura");
@@ -1124,8 +1124,8 @@ function guardar_factura() {
                                                     }
                                                 });
                                             }
-                                        }
-                                    }
+                                       // }
+                                  //  }
                                 }
                             }
 //                        } 

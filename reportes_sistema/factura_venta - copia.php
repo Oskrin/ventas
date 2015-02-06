@@ -128,9 +128,7 @@ $sql=pg_query("select id_factura_venta,num_factura,nombre_empresa,telefono_empre
 		$pdf->Text(2,8,utf8_decode(''."CLIENTE:"),0,'C', 0);////CLIENTE (X,Y)	
 		$pdf->Text(20,8,utf8_decode(''.strtoupper($fila[8])),0,'C', 0);////CLIENTE (X,Y)	
 		$pdf->Text(2,13,utf8_decode(''."DIR.:"),0,'C', 0);////CLIENTE (X,Y)	
-		$pdf->Text(20,13,utf8_decode(''.strtoupper($fila[18])),0,'C', 0);////CLIENTE (X,Y)
-		$pdf->Text(2,18,utf8_decode(''."FECHA.:"),0,'C', 0);////CLIENTE (X,Y)	
-		$pdf->Text(20,18,utf8_decode(''.strtoupper($fila[13])),0,'C', 0);////CLIENTE (X,Y)	
+		$pdf->Text(20,13,utf8_decode(''.strtoupper($fila[18])),0,'C', 0);////CLIENTE (X,Y)	
 		$pdf->Ln(10);							
 	}	
     $pdf->SetX(2);		

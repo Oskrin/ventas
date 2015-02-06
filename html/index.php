@@ -32,10 +32,10 @@ session_destroy();
     </head>
 
     <body style="background: url(../images/fondo.fw.png)no-repeat fixed center;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;">
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
         <div class="account-container">
             <div class="content clearfix">
                 <form action="" method="post" name="form_admin">

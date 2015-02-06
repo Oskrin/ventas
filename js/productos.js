@@ -1,4 +1,4 @@
-$(document).on("ready", inicio);
+﻿$(document).on("ready", inicio);
 function evento(e) {
     e.preventDefault();
 }
@@ -137,10 +137,10 @@ function guardar_producto(){
                                 $("#precio_mayorista").focus();
                                 alertify.error("Ingrese precio mayorista");
                             } else {
-                                if ($("#medida").val() === "") {
-                                    $("#medida").focus();
-                                    alertify.error("Seleccione una opción");
-                                }else{
+                               // if ($("#medida").val() === "") {
+                               //     $("#medida").focus();
+                               //     alertify.error("Seleccione una opción");
+                               // }else{
                                     $("#productos_form").submit(function(e) {
                                         var formObj = $(this);
                                         var formURL = formObj.attr("action");
@@ -187,7 +187,7 @@ function guardar_producto(){
                                     });
                                     $("#productos_form").submit();
                                 }
-                            }
+                          //  }
                         }
                     }
                 }
@@ -228,10 +228,10 @@ function modificar_producto(){
                                     $("#precio_mayorista").focus();
                                     alertify.error("Ingrese precio mayorista");
                                 } else {
-                                    if ($("#medida").val() === "") {
-                                    $("#medida").focus();
-                                    alertify.error("Seleccione una opción");
-                                }else{
+                                    //if ($("#medida").val() === "") {
+                                    //$("#medida").focus();
+                                    //alertify.error("Seleccione una opción");
+                                //}else{
                                         $("#productos_form").submit(function(e) {
                                             var formObj = $(this);
                                             var formURL = formObj.attr("action");
@@ -277,7 +277,7 @@ function modificar_producto(){
                                         });
                                         $("#productos_form").submit();
                                     }
-                                }
+                                //}
                             }
                         }
                     }
