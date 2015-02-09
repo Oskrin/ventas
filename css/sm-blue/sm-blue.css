@@ -53,8 +53,7 @@
 	.sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active,
 	.sm-blue a.highlighted {
 		background:#1983af; /* Old browsers */
-		background-image:url(css-gradients-fallback/main-item-hover-bg.png);
-		
+		background-image:url(css-gradients-fallback/main-item-hover-bg.jpg);		
 		color:#fff;
 	}
 	.sm-blue-vertical a {
